@@ -1,0 +1,14 @@
+.imgArea {
+    -webkit-box-shadow: 14px 18px 31px 17px rgba(0,0,0,0.75);
+    -moz-box-shadow: 14px 18px 31px 17px rgba(0,0,0,0.75);
+    box-shadow: 14px 18px 31px 17px rgba(0,0,0,0.75);
+}
+
+.backButton{
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    font-size: 30px;
+    color: ivory;
+    cursor: pointer;
+}

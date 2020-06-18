@@ -1,0 +1,30 @@
+.ListCardItem {
+    width: 290px;
+    text-align: center;
+    height: 60px;
+    border-radius: 15px;
+    color:ivory;
+    border: 3px solid ivory;
+    margin-bottom: 40px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.ListCardItem:hover{
+    width: 290px;
+    text-align: center;
+    height: 60px;
+    border-radius: 15px;
+    color:ivory;
+    border: 3px solid ivory;
+    margin-bottom: 40px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(227, 224, 166, 0.4);
+    cursor: pointer;
+}
