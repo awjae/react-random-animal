@@ -18,6 +18,10 @@ function LandingPage() {
         {
           name : "여우",
           en_name : "fox"
+        },
+        {
+            name : "팬더",
+            en_name: "panda"
         }
       ]
       setAnimals(animals)

@@ -23,6 +23,9 @@ function AnimalPage(props) {
                 RandomAPI = `https://randomfox.ca/floof/`;
                 key = "link"
                 break;  
+            case "panda" :
+                RandomAPI = `https://some-random-api.ml/img/panda`;
+                key = "link"
             default:
                 break;
         }
