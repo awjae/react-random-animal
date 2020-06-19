@@ -29,7 +29,7 @@ function AnimalPage(props) {
             default:
                 break;
         }
-    fetch(RandomAPI)
+        fetch(RandomAPI)
             .then(response => response.json())
             .then(response => {
                 setImageURL(response[key])
@@ -52,7 +52,12 @@ function AnimalPage(props) {
                 <a onClick={ () => { history.goBack() } }>&#129044;</a>
             </div>
             <div className="imgDiv">
-                <img className="imgArea" style={{ borderRadius : '20px', maxWidth : '80vw', maxHeight: '80vh' }} src={ ImageURL } alt="img"></img>
+                {  ImageURL.split('.').pop() !== "mp4" ? 
+                    <img className="imgArea" style={{ borderRadius : '20px', maxWidth : '80vw', maxHeight: '80vh' }} src={ ImageURL } alt="img"></img> :
+                    <video className="imgArea" style={{ borderRadius : '20px', maxWidth : '80vw', maxHeight: '80vh' }} src={ ImageURL } alt="video"></video>
+                    
+                }
+                
             </div>
         </>
     )

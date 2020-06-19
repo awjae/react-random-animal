@@ -15,14 +15,14 @@ function LandingPage() {
           name : "고양이",
           en_name : "cat"
         },
-        {
-          name : "여우",
-          en_name : "fox"
-        },
-        {
-            name : "팬더",
-            en_name: "panda"
-        }
+        // {
+        //   name : "여우",
+        //   en_name : "fox"
+        // },
+        // {
+        //     name : "팬더",
+        //     en_name: "panda"
+        // }
       ]
       setAnimals(animals)
   
