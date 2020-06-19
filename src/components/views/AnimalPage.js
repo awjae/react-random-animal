@@ -49,15 +49,10 @@ function AnimalPage(props) {
     return (
         <>
             <div className="backButton">
-                <a onClick={ () => { history.goBack() } }>&#129044;</a>
+                <a onClick={ () => { history.goBack() } }>&#8678;</a>
             </div>
             <div className="imgDiv">
-                {  ImageURL.split('.').pop() !== "mp4" ? 
-                    <img className="imgArea" style={{ borderRadius : '20px', maxWidth : '80vw', maxHeight: '80vh' }} src={ ImageURL } alt="img"></img> :
-                    <video className="imgArea" style={{ borderRadius : '20px', maxWidth : '80vw', maxHeight: '80vh' }} src={ ImageURL } alt="video"></video>
-                    
-                }
-                
+                <img className="imgArea" style={{ borderRadius : '20px', maxWidth : '80vw', maxHeight: '80vh' }} src={ ImageURL } alt="img"></img>
             </div>
         </>
     )
