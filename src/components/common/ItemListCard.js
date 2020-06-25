@@ -5,7 +5,6 @@ function ItemListCard(props) {
 
     const [item, setItem] = useState({name:"", currentPrice:0, regDate : ""})
     
-
     useEffect(() => {
         fetch(`${makeURL(props.name)}`, {
             headers : { 
@@ -13,7 +12,7 @@ function ItemListCard(props) {
                 'Accept': 'application/json'
             }
         })
-        .then(res => res.json())
+        .then(res => JSON.stringify(res))
         .then(res => console.log(res))
         // .then(res => {
         //     let price = res.rows[0].currentPrice.toString();
