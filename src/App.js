@@ -3,6 +3,8 @@ import './App_custom.css';
 import {BrowserRouter, Route, Switch } from "react-router-dom";
 import LandingPage from './components/views/LandingPage';
 import AnimalPage from './components/views/AnimalPage';
+import DFItemList from './components/views/DFItemList/DFItemList'
+
 
 
 function App() {
@@ -12,8 +14,9 @@ function App() {
       <div>
         <BrowserRouter>
           <Switch>
-            <Route exact path="/" component={LandingPage} />
-            <Route exact path="/:en_name" component={AnimalPage} />
+            {/* <Route exact path="/" component={LandingPage} />
+            <Route exact path="/:en_name" component={AnimalPage} /> */}
+            <Route exact path="/" component={DFItemList} />
           </Switch>
         </BrowserRouter>
       </div>
