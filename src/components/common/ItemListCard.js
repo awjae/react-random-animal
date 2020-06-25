@@ -5,9 +5,8 @@ function ItemListCard(props) {
 
     const [item, setItem] = useState({name:"", currentPrice:0, regDate : ""})
     
-//
-    useEffect(() => {
 
+    useEffect(() => {
         fetch(`${makeURL(props.name)}`)
             .then(res => res.json())
             .then(res => {
