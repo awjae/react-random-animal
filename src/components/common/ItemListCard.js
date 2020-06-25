@@ -13,6 +13,7 @@ function ItemListCard(props) {
                 'Accept': 'application/json'
             }
         })
+        .then(res => res.json())
         .then(res => console.log(res))
         // .then(res => {
         //     let price = res.rows[0].currentPrice.toString();
