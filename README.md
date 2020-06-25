@@ -70,3 +70,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ### Resource
 https://some-random-api.ml/
+
+### 헤로쿠에 create-react-app 올릴떄 오류
+https://bogmong.tistory.com/11
