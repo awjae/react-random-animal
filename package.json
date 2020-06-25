@@ -16,7 +16,7 @@
   },
   "proxy": "https://api.neople.co.kr",
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node serve.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
