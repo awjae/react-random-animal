@@ -12,46 +12,49 @@ function ItemListCard(props) {
                 'Accept': 'application/json'
             }
         })
-        .then(res => JSON.stringify(res))
-        .then(res => console.log(res))
-        // .then(res => {
-        //     let price = res.rows[0].currentPrice.toString();
-        //     let item = {
-        //         name : res.rows[0].itemName,
-        //         currentPrice : price.substring(0, price.length - 4) + " 만원",
-        //         regDate : res.rows[0].regDate,
-        //     }
-        //     setItem(item)
+        .then(res => res.json())
+        .then(res => {
+            let price = res.rows[0].currentPrice.toString();
+            let item = {
+                name : res.rows[0].itemName,
+                currentPrice : price.substring(0, price.length - 4) + " 만원",
+                regDate : res.rows[0].regDate,
+            }
+            setItem(item)
 
-        // });
+        })
+        .catch(error => console.error(error));
 
-        // setInterval(() => {
-        //     setItem({name:"", currentPrice:0, regDate : ""})
-        //     fetch(`${makeURL(props.name)}`, {
-        //         headers : { 
-        //             'Content-Type': 'application/json',
-        //             'Accept': 'application/json'
-        //            }
-        //     })
-        //     .then(res => res.json())
-        //     .then(res => {
-        //         let price = res.rows[0].currentPrice.toString();
-        //         let item = {
-        //             name : res.rows[0].itemName,
-        //             currentPrice : price.substring(0, price.length - 4) + " 만원",
-        //             regDate : res.rows[0].regDate,
-        //         }
-        //         setItem(item)
+        setInterval(() => {
+            setItem({name:"", currentPrice:0, regDate : ""})
+            fetch(`${makeURL(props.name)}`, {
+                headers : { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                   }
+            })
+            .then(res => res.json())
+            .then(res => {
+                let price = res.rows[0].currentPrice.toString();
+                let item = {
+                    name : res.rows[0].itemName,
+                    currentPrice : price.substring(0, price.length - 4) + " 만원",
+                    regDate : res.rows[0].regDate,
+                }
+                setItem(item)
 
-        //     });
-        //     }, 10000)
-        
-        
+            }).catch(error => console.error(error));;
+            }, 10000)
+                
     }, [])
 
+    const getRandomInt = (min, max) => { return Math.floor(Math.random() * (max - min + 1)) + min; }
 
     const makeURL = (name , id) => {
-        return `/df/auction?itemName=${name}&sort=unitPrice:asc&limit=1&wordType=front&apikey=DoPQtFzzElCIKOk84xbWGWK4yfttinQm`;
+        const APIArr = ["uSjGv0JYaZo8bQ2wwbl0w4mGFz0G1X26", "DoPQtFzzElCIKOk84xbWGWK4yfttinQm", "LCZmYCMwLy17f5iST3Yff2828YYtKTMY"];
+        const randomIdx = getRandomInt(0,2);
+
+        return `/df/auction?itemName=${name}&sort=unitPrice:asc&limit=1&wordType=front&apikey=${APIArr[randomIdx]}`;
     }
 
 

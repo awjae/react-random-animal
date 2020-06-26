@@ -1,28 +1,28 @@
 .ItemListCardItem {
-    width: 450px;
+    width: 400px;
     text-align: center;
     height: fit-content;
     padding: 10px;
     border-radius: 15px;
     color:ivory;
     border: 3px solid ivory;
-    margin-bottom: 40px;
-    font-size: 25px;
+    margin-bottom: 20px;
+    font-size: 20px;
 }
 
 .ItemListCardItem:hover{
-    width: 450px;
+    width: 400px;
     text-align: center;
     height: fit-content;
     padding: 10px;
     border-radius: 15px;
     color:ivory;
     border: 3px solid ivory;
-    margin-bottom: 40px;
-    font-size: 25px;
+    margin-bottom: 20px;
+    font-size: 20px;
     background: rgba(227, 224, 166, 0.4);
 }
 
 .regData {
-    font-size: 15px;
+    font-size: 12px;
 }
