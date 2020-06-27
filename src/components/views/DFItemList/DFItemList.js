@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ItemListCard from '../../common/ItemListCard';
+import './DFItemList.css';
 
 function DFItemList() {
 
@@ -113,7 +114,7 @@ function DFItemList() {
 
     return (
         <div style={{display:"flex"}}>
-          <div style={{ marginRight:"20px"}}>
+          <div style={{ marginRight:"20px", maxHeight: "670px", overflowY: "auto",overflowX : "hidden"}}>
               {Items && Items.map((item, index) => (
                 <React.Fragment key = { index }>
                     <ItemListCard
@@ -134,6 +135,10 @@ function DFItemList() {
                   </ItemListCard>
               </React.Fragment>
             ))}
+          </div>
+          <div className="intro">
+              <div>10초마다 갱신 됩니다.</div>
+              <div>문의사항 : <a href="https://open.kakao.com/o/seDXFyic">https://open.kakao.com/o/seDXFyic</a></div>
           </div>
         </div>
     )

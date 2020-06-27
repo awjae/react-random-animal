@@ -1,5 +1,5 @@
 .ItemListCardItem {
-    width: 400px;
+    width: 35vw;
     text-align: center;
     height: fit-content;
     padding: 10px;
@@ -11,7 +11,7 @@
 }
 
 .ItemListCardItem:hover{
-    width: 400px;
+    width: 35vw;
     text-align: center;
     height: fit-content;
     padding: 10px;
