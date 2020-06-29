@@ -12,8 +12,8 @@ function ItemListCard(props) {
                 'Accept': 'application/json'
             }
         })
-        .then(res => res.text())
-        .then(res => {JSON.parse(res)
+        .then(res => {
+            res.text()
         debugger
         })
 
