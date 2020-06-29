@@ -17,7 +17,9 @@ function ItemListCard(props) {
         //     debugger
         // })
         
-        axios.get(`${makeURL(props.name)}`)
+        axios.get(`/api${makeURL(props.name)}`, {
+            baseUrl : "df-sado.herokuapp.com"
+        })
         .then(function (res) {
             console.log(res)
             let price = res.data.rows[0].currentPrice.toString();
