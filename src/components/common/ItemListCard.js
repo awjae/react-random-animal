@@ -17,11 +17,8 @@ function ItemListCard(props) {
         //     debugger
         // })
         
-        axios.get(`/api${makeURL(props.name)}`, {
-            baseUrl : "df-sado.herokuapp.com"
-        })
+        axios.get(`/api?url=https://api.neople.co.kr${makeURL(props.name)}`)
         .then(function (res) {
-            console.log(res)
             let price = res.data.rows[0].currentPrice.toString();
             let item = {
                 name : res.data.rows[0].itemName,
@@ -36,7 +33,7 @@ function ItemListCard(props) {
 
         setInterval(() => {
             setItem({name:"", currentPrice:0, regDate : ""})
-            axios.get(`${makeURL(props.name)}`)
+            axios.get(`/api?url=https://api.neople.co.kr${makeURL(props.name)}`)
             .then(function (res) {
                 let price = res.data.rows[0].currentPrice.toString();
                 let item = {
@@ -56,10 +53,10 @@ function ItemListCard(props) {
     const getRandomInt = (min, max) => { return Math.floor(Math.random() * (max - min + 1)) + min; }
 
     const makeURL = (name , id) => {
-        const APIArr = ["uSjGv0JYaZo8bQ2wwbl0w4mGFz0G1X26", "DoPQtFzzElCIKOk84xbWGWK4yfttinQm", "LCZmYCMwLy17f5iST3Yff2828YYtKTMY", "2g40lIV3jJvMmt0notElhrqJ8H2pBtH0", "ydn6IfUYhjn9cr3l6rFgKkNHTRTTgJF7"];
-        const randomIdx = getRandomInt(0,4);
-
-        return `/df/auction?itemName=${name}&sort=unitPrice:asc&limit=1&wordType=front&apikey=${APIArr[randomIdx]}`;
+        // const APIArr = ["uSjGv0JYaZo8bQ2wwbl0w4mGFz0G1X26", "DoPQtFzzElCIKOk84xbWGWK4yfttinQm", "LCZmYCMwLy17f5iST3Yff2828YYtKTMY", "2g40lIV3jJvMmt0notElhrqJ8H2pBtH0", "ydn6IfUYhjn9cr3l6rFgKkNHTRTTgJF7"];
+        // const randomIdx = getRandomInt(0,4);
+        return `/df/auction?itemName=${name}`;
+        //return `/df/auction?itemName=${name}&sort=unitPrice:asc&limit=1&wordType=front&apikey=${APIArr[randomIdx]}`;
     }
 
 

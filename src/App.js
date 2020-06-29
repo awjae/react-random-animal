@@ -14,9 +14,11 @@ function App() {
       <div>
         <BrowserRouter>
           <Switch>
-            {/* <Route exact path="/" component={LandingPage} />
-            <Route exact path="/:en_name" component={AnimalPage} /> */}
+            {
             <Route exact path="/" component={DFItemList} />
+            /* <Route exact path="/" component={LandingPage} />
+            <Route exact path="/:en_name" component={AnimalPage} /> */
+            }
           </Switch>
         </BrowserRouter>
       </div>
