@@ -16,7 +16,7 @@ function App() {
           <Switch>
             {/* <Route exact path="/" component={LandingPage} />
             <Route exact path="/:en_name" component={AnimalPage} /> */}
-            <Route exact path="/" component={DFItemList} />
+            <Route exact path="*" component={DFItemList} />
           </Switch>
         </BrowserRouter>
       </div>
