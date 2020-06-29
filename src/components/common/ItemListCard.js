@@ -25,26 +25,26 @@ function ItemListCard(props) {
         // })
         // .catch(error => console.error(error));
 
-        // setInterval(() => {
-        //     setItem({name:"", currentPrice:0, regDate : ""})
-        //     fetch(`${makeURL(props.name)}`, {
-        //         headers : { 
-        //             'Content-Type': 'application/json',
-        //             'Accept': 'application/json'
-        //            }
-        //     })
-        //     .then(res => res.json())
-        //     .then(res => {
-        //         let price = res.rows[0].currentPrice.toString();
-        //         let item = {
-        //             name : res.rows[0].itemName,
-        //             currentPrice : price.substring(0, price.length - 4) + " 만원",
-        //             regDate : res.rows[0].regDate,
-        //         }
-        //         setItem(item)
+        setInterval(() => {
+            setItem({name:"", currentPrice:0, regDate : ""})
+            fetch(`${makeURL(props.name)}`, {
+                headers : { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                   }
+            })
+            .then(res => res.json())
+            .then(res => {
+                let price = res.rows[0].currentPrice.toString();
+                let item = {
+                    name : res.rows[0].itemName,
+                    currentPrice : price.substring(0, price.length - 4) + " 만원",
+                    regDate : res.rows[0].regDate,
+                }
+                setItem(item)
 
-        //     }).catch(error => console.error(error));;
-        //     }, 10000)
+            }).catch(error => console.error(error));;
+            }, 10000)
                 
     }, [])
 
