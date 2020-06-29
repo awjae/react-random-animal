@@ -19,6 +19,7 @@ function ItemListCard(props) {
         
         axios.get(`${makeURL(props.name)}`)
         .then(function (res) {
+            console.log(res)
             let price = res.data.rows[0].currentPrice.toString();
             let item = {
                 name : res.data.rows[0].itemName,
